@@ -1,0 +1,41 @@
+﻿@model List<recruitingWebApp.Models.User>
+
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<h2>User Profiles</h2>
+
+@if (Model != null && Model.Any())
+{
+    <div>
+        @foreach (var user in Model)
+        {
+            <div class="card" style="width: 22rem; margin: 20px auto; text-align: center; padding: 20px;">
+                @if (user.ProfileImage != null && user.ProfileImage.ImageData != null)
+                {
+                    <img class="rounded-circle" src="data:image/png;base64,@Convert.ToBase64String(user.ProfileImage.ImageData)" alt="Profile Picture" style="width: 150px; height: 150px; object-fit: cover; margin-bottom: 15px;" />
+                }
+
+                <form asp-action="UpdateProfilePic" asp-controller="Home" method="post" enctype="multipart/form-data" style="margin-top: 10px;">
+                    <input type="hidden" name="UserId" value="@user.Id" />
+                    <input type="file" name="file" accept="image/*" required class="form-control mb-2" />
+                    <button type="submit" class="btn btn-primary">Change Profile Picture</button>
+                </form>
+
+                <div class="card-body">
+                    <h3 class="card-title">@user.FirstName @user.LastName</h3>
+                    <p class="text-muted">@user.Username</p>
+                    <p class="card-text">@(!string.IsNullOrEmpty(user.Bio) ? user.Bio : "No bio")</p>
+                </div>
+                <hr>
+                <h5>Posts</h5>
+                <p class="text-muted">No posts yet.</p>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No users found.</p>
+}

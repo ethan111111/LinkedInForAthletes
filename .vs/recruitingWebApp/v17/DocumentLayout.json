@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\.gitignore",
+              "RelativeDocumentMoniker": "recruitingWebApp\\.gitignore",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\.gitignore",
+              "RelativeToolTip": "recruitingWebApp\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-05T02:47:43.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserProfile.cshtml",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Home\\UserProfile.cshtml",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Views\\Home\\UserProfile.cshtml",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Home\\UserProfile.cshtml",
+              "RelativeToolTip": "recruitingWebApp\\Views\\Home\\UserProfile.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAkwCUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-05T01:46:23.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Models\\User.cs",
+              "RelativeToolTip": "recruitingWebApp\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T01:46:16.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "recruitingWebApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAQwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T19:13:15.202Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
