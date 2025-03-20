@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using recruitingWebApp.Models;
 using PostgreSQL.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace recruitingWebApp.Controllers
 {
@@ -32,11 +33,11 @@ namespace recruitingWebApp.Controllers
         }
 
 
-
+        /*
         [HttpPost]
-        public async Task<IActionResult> Upload(string FirstName, string LastName, string Bio, string Username, IFormFile file)
+        public async Task<IActionResult> Upload(string FirstName, string LastName, string Bio, string Username,string Password, IFormFile file)
         {
-            if (file == null || file.Length == 0 || string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(Username))
+            if (file == null || file.Length == 0 || string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
             {
                 ViewData["Message"] = "Please provide all required fields.";
                 return View("Index");
@@ -65,6 +66,7 @@ namespace recruitingWebApp.Controllers
                     FirstName = FirstName,
                     LastName = LastName,
                     Username = Username,
+                    Password = Password,
                     Bio = Bio,
                     ProfilePicId = profilePic.Id
                 };
@@ -75,7 +77,7 @@ namespace recruitingWebApp.Controllers
             ViewData["Message"] = "User and profile picture uploaded successfully!";
             return View("Index");
         }
-
+        */
 
         [HttpPost]
         public async Task<IActionResult> UpdateProfilePic(int UserId, IFormFile file)

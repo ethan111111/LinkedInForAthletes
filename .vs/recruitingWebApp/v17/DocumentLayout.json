@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\login\\createprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\login\\createprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +17,54 @@
     {
       "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\home\\userprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\models\\profilepic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\models\\profilepic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Migrations\\20250320022248_user password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:recruitingWebApp\\Migrations\\20250320022248_user password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|c:\\users\\ejnic\\onedrive\\desktop\\howtomake\\webapp\\recruitingwebapp\\recruitingwebapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{97D5B688-C331-4EBA-B360-2888A3AD9C01}|recruitingWebApp\\recruitingWebApp.csproj|solutionrelative:recruitingwebapp\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,32 +74,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\.gitignore",
-              "RelativeDocumentMoniker": "recruitingWebApp\\.gitignore",
-              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\.gitignore",
-              "RelativeToolTip": "recruitingWebApp\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-05T02:47:43.774Z",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "recruitingWebApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAACUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T19:13:15.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "recruitingWebApp\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwBkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-05T20:50:01.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "recruitingWebApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowB4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-05T20:49:39.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UserProfile.cshtml",
               "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Home\\UserProfile.cshtml",
               "RelativeDocumentMoniker": "recruitingWebApp\\Views\\Home\\UserProfile.cshtml",
               "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Home\\UserProfile.cshtml",
               "RelativeToolTip": "recruitingWebApp\\Views\\Home\\UserProfile.cshtml",
-              "ViewState": "AgIAABoAAAAAAAAAAAAkwCUAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-05T01:46:23.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Login\\Login.cshtml",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Views\\Login\\Login.cshtml",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Login\\Login.cshtml",
+              "RelativeToolTip": "recruitingWebApp\\Views\\Login\\Login.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowA8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:07:21.086Z",
               "EditorCaption": ""
             },
             {
@@ -62,21 +149,137 @@
               "RelativeDocumentMoniker": "recruitingWebApp\\Models\\User.cs",
               "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Models\\User.cs",
               "RelativeToolTip": "recruitingWebApp\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T01:46:16.069Z"
+              "WhenOpened": "2025-03-05T01:46:16.069Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "recruitingWebApp\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "recruitingWebApp\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAQwIsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CreateProfile.cshtml",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Login\\CreateProfile.cshtml",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Views\\Login\\CreateProfile.cshtml",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Login\\CreateProfile.cshtml",
+              "RelativeToolTip": "recruitingWebApp\\Views\\Login\\CreateProfile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-20T03:06:59.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "recruitingWebApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-05T20:51:41.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "recruitingWebApp\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAowEYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T19:13:15.202Z"
+              "WhenOpened": "2025-03-20T03:06:13.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "recruitingWebApp\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-05T03:04:59.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProfilePic.cs",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Models\\ProfilePic.cs",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Models\\ProfilePic.cs",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Models\\ProfilePic.cs",
+              "RelativeToolTip": "recruitingWebApp\\Models\\ProfilePic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:19:40.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\appsettings.json",
+              "RelativeDocumentMoniker": "recruitingWebApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\appsettings.json",
+              "RelativeToolTip": "recruitingWebApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-13T03:30:30.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250320022248_user password.cs",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Migrations\\20250320022248_user password.cs",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Migrations\\20250320022248_user password.cs",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Migrations\\20250320022248_user password.cs",
+              "RelativeToolTip": "recruitingWebApp\\Migrations\\20250320022248_user password.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:22:48.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "recruitingWebApp\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-05T20:51:53.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "recruitingWebApp\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "recruitingWebApp\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-05T20:51:54.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\.gitignore",
+              "RelativeDocumentMoniker": "recruitingWebApp\\.gitignore",
+              "ToolTip": "C:\\Users\\ejnic\\OneDrive\\Desktop\\howToMake\\webApp\\recruitingWebApp\\recruitingWebApp\\.gitignore",
+              "RelativeToolTip": "recruitingWebApp\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-05T02:47:43.774Z"
             }
           ]
         }
