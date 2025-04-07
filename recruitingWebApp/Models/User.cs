@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace recruitingWebApp.Models
 {
-    public class User
+    public class User 
     {
         [Key]
         public int Id { get; set; }

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -20,22 +22,34 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="UserProfile">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="CreateProfile">CreateProfile</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
 
-
+                        @if (HttpContextAccessor.HttpContext?.Session.GetInt32("UserId") != null)
+                        {
+                   
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="User" asp-action="UserProfile">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <form asp-action="Logout" asp-controller="Login" method="post" class="d-inline">
+                                    <button type="submit" class="nav-link btn btn-link text-dark" style="padding: 0; border: none;">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                           
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Login" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Login" asp-action="CreateProfile">CreateProfile</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

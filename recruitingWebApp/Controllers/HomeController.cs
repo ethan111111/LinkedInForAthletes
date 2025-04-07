@@ -117,7 +117,7 @@ namespace recruitingWebApp.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToAction("UserProfile");
+            return RedirectToAction("UserProfile", "User");
         }
 
 

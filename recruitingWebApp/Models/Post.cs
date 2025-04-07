@@ -3,13 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace recruitingWebApp.Models
 {
-    public class ProfilePic
+    public class Post
     {
         [Key] 
-        public int Id { get; set; }  
+        public int Id { get; set; }  // PostID
 
         [Required]
-        public byte[] ImageData { get; set; } //image converted to bit array and stored
+        public byte[] ImageData { get; set; } //post picture converted to bit array
+
+        public string? Caption { get; set; }
 
         // Navigation property for User (One-to-One relationship)
         public virtual User User { get; set; }
