@@ -34,5 +34,8 @@ namespace recruitingWebApp.Models
 
         [ForeignKey("ProfilePicId")]
         public virtual ProfilePic ProfileImage { get; set; }
+
+        //one to many relationship
+        public virtual ICollection<Post> Posts { get; set; } = new List<Post>();
     }
 }

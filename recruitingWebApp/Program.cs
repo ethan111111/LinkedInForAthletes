@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PostgreSQL.Data;
+using Microsoft.Extensions.Azure;
+using Microsoft.AspNetCore.Http.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,9 +20,25 @@ builder.Services.AddSession(options =>
 });
 
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddAzureClients(clientBuilder =>
+{
+    clientBuilder.AddBlobServiceClient(builder.Configuration["StorageConnection:blobServiceUri"]!).WithName("StorageConnection");
+    clientBuilder.AddQueueServiceClient(builder.Configuration["StorageConnection:queueServiceUri"]!).WithName("StorageConnection");
+    clientBuilder.AddTableServiceClient(builder.Configuration["StorageConnection:tableServiceUri"]!).WithName("StorageConnection");
+});
+
+
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 200_000_000; // 200 MB
+    options.ValueLengthLimit = 200_000_000;
+    options.MultipartHeadersLengthLimit = 200_000_000;
+});
 
 
 var app = builder.Build();
+
+
 
 app.UseSession();
 

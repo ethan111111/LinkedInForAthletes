@@ -5,15 +5,19 @@ namespace recruitingWebApp.Models
 {
     public class Post
     {
-        [Key] 
-        public int Id { get; set; }  // PostID
+        public int Id { get; set; }
+
+        public string Caption { get; set; } = string.Empty;
 
         [Required]
-        public byte[] ImageData { get; set; } //post picture converted to bit array
+        public string PostUrl { get; set; } = string.Empty;
 
-        public string? Caption { get; set; }
+        public DateTime Timestamp { get; set; }
+        public string ContentType { get; set; } = "application/octet-stream";
 
-        // Navigation property for User (One-to-One relationship)
-        public virtual User User { get; set; }
+        [ForeignKey("User")]
+        public int? UserId { get; set; }
+
+        public User? User { get; set; } // Navigation property
     }
 }
