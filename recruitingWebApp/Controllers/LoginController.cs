@@ -2,6 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using PostgreSQL.Data;
 using recruitingWebApp.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace recruitingWebApp.Controllers
 {
@@ -25,48 +28,59 @@ namespace recruitingWebApp.Controllers
         {
             return View();
         }
-        //TODO: make it so bio isnt needed to create a profile
-        //TODO: make it so that if there isnt a profile pic uploaded give user a default profilepic
+
+        // Create user and upload profile picture
         [HttpPost]
         public async Task<IActionResult> Upload(string FirstName, string LastName, string Bio, string Username, string Password, IFormFile file)
         {
-            if (file == null || file.Length == 0 || string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
+            if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
             {
                 ViewData["Message"] = "Please provide all required fields.";
                 return View("CreateProfile");
             }
 
-            using (var memoryStream = new MemoryStream())
+            var profilePic = new ProfilePic();
+
+            if (file != null && file.Length > 0)
             {
-                await file.CopyToAsync(memoryStream);
-                var profilePic = new ProfilePic
+                using (var memoryStream = new MemoryStream())
                 {
-                    ImageData = memoryStream.ToArray()
-                };
+                    await file.CopyToAsync(memoryStream);
+                    profilePic.ImageData = memoryStream.ToArray();
+                    _context.Images.Add(profilePic);
+                    await _context.SaveChangesAsync();
+                }
+            }
+            else
+            {
+                // Create a default profile pic entry if none uploaded
+                profilePic = new ProfilePic { ImageData = new byte[0] };
                 _context.Images.Add(profilePic);
                 await _context.SaveChangesAsync();
-
-                var user = new User
-                {
-                    FirstName = FirstName,
-                    LastName = LastName,
-                    Username = Username,
-                    Password = Password,
-                    Bio = Bio,
-                    ProfilePicId = profilePic.Id
-                };
-                _context.Users.Add(user);
-                await _context.SaveChangesAsync();
             }
+
+            var user = new User
+            {
+                FirstName = FirstName,
+                LastName = LastName,
+                Username = Username,
+                Password = Password,
+                Bio = Bio,
+                ProfilePicId = profilePic.Id
+            };
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
 
             ViewData["Message"] = "User and profile picture uploaded successfully!";
             return View("Login");
         }
 
+        // Login
         [HttpPost]
         public async Task<IActionResult> UserLogin(string Username, string Password)
         {
-            Console.WriteLine(" UserLogin called");
+            Console.WriteLine("UserLogin called");
 
             if (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
             {
@@ -84,27 +98,33 @@ namespace recruitingWebApp.Controllers
                 return RedirectToAction("Login");
             }
 
-            // Save user ID in session
+            // Store user ID in session
             HttpContext.Session.SetInt32("UserId", user.Id);
 
-            //TODO: Remove this :
-            //Show user's bio in alert
-            TempData["AlertMessage"] = user.Bio ?? "No bio found.";
+          
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+            };
 
+            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var principal = new ClaimsPrincipal(identity);
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+            TempData["AlertMessage"] = user.Bio ?? "No bio found.";
             return RedirectToAction("UserProfile", "User");
         }
 
-
+        // Logout
         [HttpPost]
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
-            // Clear all session data (logs out the user)
             HttpContext.Session.Clear();
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
-            // TODO: Remove
             TempData["AlertMessage"] = "You have been logged out.";
-
-            // Redirect to the login page
             return RedirectToAction("Login", "Login");
         }
     }

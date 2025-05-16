@@ -25,6 +25,8 @@ namespace PostgreSQL.Data
 
         public DbSet<Post> Posts { get; set; }
 
+        public DbSet<Measurments> Measurment { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

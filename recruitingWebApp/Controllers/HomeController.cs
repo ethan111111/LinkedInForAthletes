@@ -22,63 +22,24 @@ namespace recruitingWebApp.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var currentUsername = User.Identity?.Name;
+
+            var posts = await _context.Posts
+                .Include(p => p.User)
+                    .ThenInclude(u => u.ProfileImage)
+                .Where(p => p.User.Username != currentUsername) // exclude current user
+                .OrderByDescending(p => p.Timestamp)             // most recent first
+                .ToListAsync();
+
+            return View(posts); // Send list of posts to view
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
 
-        /*
-        [HttpPost]
-        public async Task<IActionResult> Upload(string FirstName, string LastName, string Bio, string Username,string Password, IFormFile file)
-        {
-            if (file == null || file.Length == 0 || string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
-            {
-                ViewData["Message"] = "Please provide all required fields.";
-                return View("Index");
-            }
-
-            // Remove existing user and profile picture before adding a new one
-            var existingUsers = _context.Users.ToList();
-            if (existingUsers.Any())
-            {
-                _context.Users.RemoveRange(existingUsers);
-                await _context.SaveChangesAsync();
-            }
-
-            using (var memoryStream = new MemoryStream())
-            {
-                await file.CopyToAsync(memoryStream);
-                var profilePic = new ProfilePic
-                {
-                    ImageData = memoryStream.ToArray()
-                };
-                _context.Images.Add(profilePic);
-                await _context.SaveChangesAsync();
-
-                var user = new User
-                {
-                    FirstName = FirstName,
-                    LastName = LastName,
-                    Username = Username,
-                    Password = Password,
-                    Bio = Bio,
-                    ProfilePicId = profilePic.Id
-                };
-                _context.Users.Add(user);
-                await _context.SaveChangesAsync();
-            }
-
-            ViewData["Message"] = "User and profile picture uploaded successfully!";
-            return View("Index");
-        }
-        */
-
+     
+        //changing profile pic (deletes old one from db and adds new one)
         [HttpPost]
         public async Task<IActionResult> UpdateProfilePic(int UserId, IFormFile file)
         {

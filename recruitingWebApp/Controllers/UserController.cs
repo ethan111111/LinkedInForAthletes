@@ -22,7 +22,7 @@ namespace recruitingWebApp.Controllers
             _config = config;
         }
 
-
+        //blob storage for post media files
         public BlobServiceClient GetBlobServiceClient()
         {
             var connStr = _config["AzureStorage:ConnectionString"];
@@ -32,12 +32,9 @@ namespace recruitingWebApp.Controllers
 
 
 
-        /* TODO:
-         * Convert uploaded image to bit array or send video to cdn
-         * send post to db
-         * update db too in console
-         */
+        //add post from the user profile
         [HttpPost]
+        [RequestSizeLimit(200_000_000)]
         public async Task<IActionResult> AddPost(string Caption, IFormFile file)
         {
 
@@ -49,7 +46,7 @@ namespace recruitingWebApp.Controllers
                 return RedirectToAction("UserProfile");
             }
 
-            // Get BlobServiceClient using your method
+            // Get BlobServiceClient
             var blobServiceClient = GetBlobServiceClient();
 
             // Get container reference
@@ -82,7 +79,106 @@ namespace recruitingWebApp.Controllers
             return RedirectToAction("UserProfile");
         }
 
-        //TODO: add function that gets users posts
+
+        //Deletes post from db so not seen by user anymore
+        [HttpPost]
+        public async Task<IActionResult> DeletePost(int postID)
+        {
+            var post = await _context.Posts.FindAsync(postID);
+            if (post != null)
+            {
+                _context.Posts.Remove(post);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction("UserProfile");
+        }
+
+        //Updates profile attributes
+        [HttpPost]
+        public async Task<IActionResult> UpdateProfile(string? FirstName, string? LastName, string? Username, string? Bio)
+        {
+            Console.WriteLine("UpdateProfile called");
+
+            var userId = HttpContext.Session.GetInt32("UserId");
+          
+
+            var user = await _context.Users.FindAsync(userId.Value);
+            if (user == null)
+            {
+                return NotFound(); // User not found in DB
+            }
+
+            // Only update fields if new values are provided
+            if (!string.IsNullOrWhiteSpace(FirstName))
+            {
+                user.FirstName = FirstName;
+            }
+
+            if (!string.IsNullOrWhiteSpace(LastName))
+            {
+                user.LastName = LastName;
+            }
+
+            if (!string.IsNullOrWhiteSpace(Username))
+            {
+                user.Username = Username;
+            }
+
+            if (Bio != null) // Allow clearing bio
+            {
+                user.Bio = Bio;
+            }
+
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("UserProfile");
+        }
+
+        //Public user profile view
+        public async Task<IActionResult> ViewUserProfile(int id)
+        {
+            var user = await _context.Users
+                .Include(u => u.ProfileImage)
+                .Include(u => u.Posts)
+                .FirstOrDefaultAsync(u => u.Id == id);
+
+            if (user == null)
+                return NotFound();
+
+            var measurements = await _context.Measurment
+                .Where(m => m.UserId == id)
+                .ToListAsync();
+
+            ViewBag.Measurements = measurements;
+
+            return View("PublicUserProfileView", user);
+        }
+
+        //Add measuremnts to users profile 
+        [HttpPost]
+        public async Task<IActionResult> AddMeasurement(string Measurement, string Value)
+        {
+            var userId = HttpContext.Session.GetInt32("UserId");
+            if (userId == null || string.IsNullOrWhiteSpace(Measurement) || string.IsNullOrWhiteSpace(Value))
+            {
+                return RedirectToAction("UserProfile");
+            }
+
+            var entry = new Measurments
+            {
+                UserId = userId.Value,
+                Measurement = Measurement,
+                Value = Value
+            };
+
+            _context.Measurment.Add(entry);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("UserProfile");
+        }
+
 
         public async Task<IActionResult> UserProfile()
         {
@@ -105,6 +201,13 @@ namespace recruitingWebApp.Controllers
                 // Could not find user in DB
                 return View(null);
             }
+
+            var measurements = await _context.Measurment
+            .Where(m => m.UserId == userId.Value)
+            .ToListAsync();
+
+            ViewBag.Measurements = measurements;
+
 
             return View(user);
         }

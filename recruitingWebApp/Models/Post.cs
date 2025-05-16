@@ -16,8 +16,8 @@ namespace recruitingWebApp.Models
         public string ContentType { get; set; } = "application/octet-stream";
 
         [ForeignKey("User")]
-        public int? UserId { get; set; }
+        public int UserId { get; set; }
 
-        public User? User { get; set; } // Navigation property
+        public User? User { get; set; }
     }
 }
