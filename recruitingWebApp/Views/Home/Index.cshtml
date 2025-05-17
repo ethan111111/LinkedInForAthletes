@@ -1,0 +1,42 @@
+﻿@model List<recruitingWebApp.Models.Post>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h2 class="mb-4 text-center">Recent Posts</h2>
+
+<div class="container d-flex flex-column align-items-center">
+    @foreach (var post in Model)
+    {
+        var user = post.User;
+        var hasProfileImage = user?.ProfileImage?.ImageData != null;
+        string base64Image = hasProfileImage
+        ? $"data:image/png;base64,{Convert.ToBase64String(user.ProfileImage.ImageData)}"
+        : Url.Content("~/images/default-profile.png"); // if user has not profile pic 
+
+        <div class="card mb-4" style="width: 100%; max-width: 600px;">
+            <div class="card-header d-flex align-items-center">
+                <img src="@base64Image" class="rounded-circle me-2" style="width: 35px; height: 35px; object-fit: cover;" alt="Profile" />
+                <a asp-controller="User" asp-action="ViewUserProfile" asp-route-id="@user?.Id" class="fw-bold text-decoration-none text-dark">
+                    @user?.Username
+                </a>
+                <span class="ms-auto text-muted small">@post.Timestamp.ToString("g")</span>
+            </div>
+            <div class="card-body p-3">
+                @if (post.ContentType.StartsWith("image"))
+                {
+                    <img src="@post.PostUrl" class="img-fluid rounded mb-2" alt="Post image" />
+                }
+                else if (post.ContentType.StartsWith("video"))
+                {
+                    <video controls class="w-100 mb-2 rounded">
+                        <source src="@post.PostUrl" type="@post.ContentType" />
+                        Your browser does not support the video tag.
+                    </video>
+                }
+                <p class="mb-0">@post.Caption</p>
+            </div>
+        </div>
+    }
+</div>
