@@ -1,0 +1,58 @@
+﻿@model recruitingWebApp.Models.User
+
+@{
+    ViewData["Title"] = "Upload User Profile";
+}
+
+<h2>Create Profile</h2>
+
+<form asp-action="Upload" asp-controller="Login" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="FirstName">First Name:</label>
+        <input type="text" id="FirstName" name="FirstName" required class="form-control" />
+    </div>
+    <br>
+    <div>
+        <label for="LastName">Last Name:</label>
+        <input type="text" id="LastName" name="LastName" required class="form-control" />
+    </div>
+    <br>
+    <div>
+        <label for="Username">Username:</label>
+        <input type="text" id="Username" name="Username" required class="form-control" />
+    </div>
+    <br>
+    <div>
+        <label for="Password">Password:</label>
+        <input type="password" id="Password" name="Password" required class="form-control" />
+    </div>
+
+    <br>
+    <div>
+        <label for="Bio">Bio:</label>
+        <input type="text" id="Bio" name="Bio" />
+    </div>
+    <br>
+    <div>
+        <label for="fileInput">Choose a profile picture:</label>
+        <input type="file" id="fileInput" name="file" accept="image/*" onchange="previewImage(event)" required class="form-control" />
+    </div>
+    <br>
+    <div>
+        <img id="imagePreview" src="#" alt="Image preview" style="max-width: 300px; display: none;" />
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
+<script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var imagePreview = document.getElementById('imagePreview');
+            imagePreview.src = reader.result;
+            imagePreview.style.display = 'block';
+        }
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>

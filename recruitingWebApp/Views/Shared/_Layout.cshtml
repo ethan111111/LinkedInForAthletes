@@ -1,0 +1,118 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - recruitingWebApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/recruitingWebApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/OurLogo.png" alt="Logo" style="height: 40px;" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+                        @if (HttpContextAccessor.HttpContext?.Session.GetInt32("UserId") != null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="User" asp-action="UserProfile">Profile</a>
+                            </li>
+
+                            <li class="nav-item ms-auto">
+                                <a href="#" class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#editProfileOffcanvas" aria-controls="editProfileOffcanvas">
+                                    @{
+                                        var user = HttpContextAccessor.HttpContext?.Items["User"] as recruitingWebApp.Models.User;
+                                        if (user?.ProfileImage?.ImageData != null)
+                                        {
+                                            var base64Image = Convert.ToBase64String(user.ProfileImage.ImageData);
+                                            <img src="data:image/png;base64,@base64Image" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;" alt="Profile Pic" />
+                                        }
+                                        else
+                                        {
+                                            <img src="~/images/unknownProfile.jpg" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;" alt="Default Profile Pic" />
+                                        }
+                                    }
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Login" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Login" asp-action="CreateProfile">CreateProfile</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+      
+    </footer>
+
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="editProfileOffcanvas" aria-labelledby="editProfileOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 id="editProfileOffcanvasLabel">Edit Profile</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form asp-controller="User" asp-action="UpdateProfile" method="post">
+                <div class="mb-3">
+                    <label for="FirstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" name="FirstName" value="@((HttpContextAccessor.HttpContext?.Items["User"] as recruitingWebApp.Models.User)?.FirstName)" required />
+                </div>
+                <div class="mb-3">
+                    <label for="LastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="LastName" value="@((HttpContextAccessor.HttpContext?.Items["User"] as recruitingWebApp.Models.User)?.LastName)" required />
+                </div>
+                <div class="mb-3">
+                    <label for="Username" class="form-label">Username</label>
+                    <input type="text" class="form-control" name="Username" value="@((HttpContextAccessor.HttpContext?.Items["User"] as recruitingWebApp.Models.User)?.Username)" required />
+                </div>
+                <div class="mb-3">
+                    <label for="Bio" class="form-label">Bio</label>
+                    <textarea class="form-control" name="Bio" rows="3">@((HttpContextAccessor.HttpContext?.Items["User"] as recruitingWebApp.Models.User)?.Bio)</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+            </form>
+            <div style="margin:100px">
+                <form asp-action="Logout" asp-controller="Login" method="post" class="d-inline">
+                    <button type="submit" class="btn btn-primary w-100">Logout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
